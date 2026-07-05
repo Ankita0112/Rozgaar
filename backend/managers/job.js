@@ -9,7 +9,11 @@ class JobManager {
     console.log("Reached manager", category);
     try {
       console.log("Hello?");
-      let allJobs = await this.job.find({ category: category });
+      let query = {};
+      if (category && typeof category === "string" && category.trim().length > 0) {
+        query = { category: category };
+      }
+      let allJobs = await this.job.find(query);
       console.log(allJobs);
       return allJobs;
     } catch (err) {

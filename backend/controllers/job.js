@@ -10,7 +10,7 @@ class JobController {
     try {
       let allJobs = await this.jobService.getAllJobs(category);
       console.log("Result from controller", allJobs);
-      return res.status(201).json({
+      return res.status(200).json({
         jobs: allJobs,
       });
     } catch (err) {
