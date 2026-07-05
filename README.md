@@ -1,27 +1,5 @@
-# Rozgaar Clone — Setup Guide
 
-This is a full clone of the Rozgaar blue-collar job platform: a React frontend
-and a Node/Express + MongoDB backend. Original project:
-https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-*
 
-## What's inside
-
-```
-rozgaar-clone/
-├── backend/     Node.js + Express + MongoDB API
-└── frontend/    React app (Create React App)
-```
-
-**Note on `node_modules`:** these aren't included in the download (they're huge
-and machine-specific). You'll install them yourself with `npm install` —
-that's normal for any Node project.
-
-**Important fix already applied:** the original frontend called a live demo
-backend hosted on Heroku (`pacific-taiga-02637.herokuapp.com`), which is likely
-no longer running. I rewired all API calls through a single `src/config.js`
-file so the frontend now talks to *your own* local backend by default.
-
----
 
 ## 1. Backend setup
 
